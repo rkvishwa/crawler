@@ -1,0 +1,13 @@
+{
+  "name": "buildathon-vote-smoke",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Single-run Playwright smoke for buildathon voting flow (no production load loops).",
+  "scripts": {
+    "test": "playwright test",
+    "test:smoke": "playwright test tests/buildathon-vote-smoke.spec.ts"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.52.0"
+  }
+}
