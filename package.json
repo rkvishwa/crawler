@@ -2,10 +2,13 @@
   "name": "buildathon-vote-smoke",
   "private": true,
   "version": "0.0.0",
-  "description": "Single-run Playwright smoke for buildathon voting flow (no production load loops).",
+  "description": "Playwright smoke for buildathon voting flow; optional 2/min scheduled loop (staging/localhost).",
   "scripts": {
     "test": "playwright test",
-    "test:smoke": "playwright test tests/buildathon-vote-smoke.spec.ts"
+    "test:smoke": "playwright test tests/buildathon-vote-smoke.spec.ts",
+    "test:smoke:loop": "node scripts/smoke-loop.mjs",
+    "cast-vote": "node scripts/cast-vote.mjs",
+    "cast-vote:playwright": "node scripts/cast-vote-playwright.mjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.52.0"
